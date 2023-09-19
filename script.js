@@ -4,16 +4,26 @@ var losses = 0;
 var total = 0;
 
 function playRockPaperScissors() {
-    var choice = prompt('Please Chose Your Weapon\n\nrock, paper, or scissors');
+    var choice = prompt('Please Choose Your Weapon\n\nrock, paper, or scissors');
+
+    if (choice === null) {
+        alert("You walk away thinking to yourself that you aren't playing.\nSuddenly everything slowly grows dark.\n\nYou have perished...");
+        losses++;
+        playRockPaperScissors();
+        
+    } else if (choice === "") {
+        alert("Please make a choice.\nYou must not leave it blank.\n\nYour life very well depends on it.");
+        playRockPaperScissors(); 
+        return;
+    }
+
+    choice = choice.toLowerCase(); // Convert the choice to lowercase for case-insensitive comparison
 
     if (choice === "rock" || choice === "paper" || choice === "scissors") {
-        alert('You have chosen ' + choice +'!'+'\n\nWill that be enough to claim victory?')
+        alert('You have chosen ' + choice + '!' + '\n\nWill that be enough to claim victory?');
         console.log(choice);
-    } else if (choice === "") {
-        alert("please hit play again\nand make a selection")
-        return;
     } else {
-        console.log(choice, " is not available");
+        console.log(choice + " is not available");
         alert('You must purchase the DLC to use that!\n\nYou enter the battle unarmed');
     }
 
