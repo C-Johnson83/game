@@ -1,0 +1,59 @@
+:root {
+    --color1: #ff00ff90;
+    --color2: #00ffff90;
+    --color3: #00000090;
+}
+
+* {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: gray;
+}
+
+html {
+    background-color: #000000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(https://images.hindustantimes.com/img/2022/07/07/550x309/nightmare_1657207052456_1657207062086.jpg);
+    background-size: cover;
+    
+
+}
+
+button {
+    background-color: #000000;
+    width: 400px;
+    height: 200px;
+    color: var(--color2);
+    font-size: 2rem;
+    text-decoration:double;
+    border-style: ridge;
+    border-color:  var(--color2);
+    border-width: 20px;
+
+}
+
+section {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-image: linear-gradient(to right, var(--color1), var(--color2));
+    background-color: #00000050;
+    
+}
+
+p {
+    color: gray;
+    background-color: #00000092;
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    font-size: xx-large;
+}
